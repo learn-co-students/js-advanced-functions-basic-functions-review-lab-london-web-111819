@@ -7,17 +7,30 @@ let mondayWork = function(activity = "go to the office") {
     return `This Monday, I will ${activity}.`
 }
 
-function wrapAdjective(adjective="*") {
-    return innerFunction = function(singleParameter = "special") {
-        return `You are ${adjective}${singleParameter}${adjective}!`
+let wrapAdjective = function(style="*") {
+    return function(adjective="special") {
+      return `You are ${style}${adjective}${style}!`
     }
 }
 
-let Calculator = {
-    :add = function (a,b){
+const Calculator = {
+    add: function (a,b){
         return a+b
+    },
+    subtract: function (a,b){
+        return a-b
+    },
+    multiply: function (a,b){
+        return a*b
+    },
+    divide: function (a,b){
+        return a/b
     }
 }
 
-// console.log(wrapAdjective("%")("a dedicated programmer"))
-// console.log(wrapAdjective()())
+const actionApplyer = function (startingPoint,givenArray){
+    if (givenArray.length == 0){
+        return startingPoint
+    }
+    
+}
