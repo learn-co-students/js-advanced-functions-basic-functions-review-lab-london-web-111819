@@ -14,8 +14,8 @@ function wrapAdjective(adjective="*") {
 }
 
 let Calculator = {
-    return add = function (){
-        return 1+3
+    :add = function (a,b){
+        return a+b
     }
 }
 
